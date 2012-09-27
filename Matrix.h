@@ -46,18 +46,18 @@ class Matrix
     //
     // HELPERS
     // 
-    Node * up        (const Node const *)        const;
-    Node * down      (const Node const *)        const;
-    Node * left      (const Node const *)        const;
-    Node * right     (const Node const *)        const;
-    Node * traverse  (int, int)                  const;
+    Node * up        (const Node *)         const;
+    Node * down      (const Node *)         const;
+    Node * left      (const Node *)         const;
+    Node * right     (const Node *)         const;
+    Node * traverse  (int, int)             const;
     void findHamiltonianPath  (Node *, int);
     
-    Node * upz       (const Node const *)        const;
-    Node * downz     (const Node const *)        const;
-    Node * leftz     (const Node const *)        const;
-    Node * rightz    (const Node const *)        const;
-    Node * traversez (int, int)                  const;
+    Node * upz       (const Node *)         const;
+    Node * downz     (const Node *)         const;
+    Node * leftz     (const Node *)         const;
+    Node * rightz    (const Node *)         const;
+    Node * traversez (int, int)             const;
     void   bfs       (Node *, int);
 
     
@@ -75,8 +75,8 @@ class Matrix
     // 
     // INTERNAL TYPEDEFS
     //
-    typedef std::vector <Node > NodeVector;
-    typedef std::vector <NodeVector> NodeMatrix;
+    typedef std::vector <Node >                              NodeVector;
+    typedef std::vector <NodeVector>                         NodeMatrix;
     typedef std::map < const Node, NodeVector, NodeCompare > NodeVectorMap;
 
     
@@ -84,21 +84,18 @@ class Matrix
     //
     // PRIVATE MEMBERS
     //
-    int     mySolutionCount;
-    int     myOursCount;
-    int     myXLen;
-    int     myYLen;
-    Node *  myStart;
-    NodeMatrix myMatrix;
-    NodeMatrix myAdjacencyList;
+    int           mySolutionCount;
+    int           myOursCount;
+    int           myXLen;
+    int           myYLen;
+    Node *        myStart;
+    NodeMatrix    myMatrix;
+    NodeMatrix    myAdjacencyList;
     NodeVectorMap myAdjacencyMap;
     
     // these two only used for debugging
     std::vector <Node *> myCurrentPath;
     bool myDebug;
-    
 };
-
-
 
 #endif

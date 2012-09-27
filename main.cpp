@@ -7,20 +7,16 @@
 #include "Matrix.h"
 
 
-
-
 //
 // der main
 //
 int main (int argc, const char * argv[])
 {
-    // fred
     Matrix fred;
     
     // just in case
     try 
     {
-        
         // reads the input from stdin
         fred.read();
         
@@ -32,7 +28,6 @@ int main (int argc, const char * argv[])
         
         // print the results
         fred.printResults();
-        
     } 
     
     // woops
@@ -41,7 +36,7 @@ int main (int argc, const char * argv[])
         return 1;
     }
     
-    // and return. happy happy
+    // happy happy path
     return 0;
 }
 

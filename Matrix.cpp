@@ -18,7 +18,7 @@ using namespace std;
 //
 
 
-// bfs
+// breadth-first
 void Matrix::bfs()
 {
     bfs(myStart, 0);

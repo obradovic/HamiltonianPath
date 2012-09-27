@@ -66,7 +66,7 @@ class Node
     // BOOKKEEPERS
     //
     Node  ();
-    Node  (int, int, int, int);
+    Node  (int, int, int, int);   // x, y, value, id
     Node  (const Node &);
     ~Node ();
     
